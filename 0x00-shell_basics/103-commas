@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n "./, ../, "; find * -maxdepth 0 -type d -printf '%p/, ' -o -type f -print | tr '\n' ',' | sed 's/,$/\n/'
+ls -xamp
