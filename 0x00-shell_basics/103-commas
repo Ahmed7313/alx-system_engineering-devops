@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "./, ../, $(ls -A1 | grep -E '^[0-9a-zA-Z]' | tr '\n' ',' | sed 's/,$//')"
+echo -n "./, ../, "; find * -maxdepth 0 -type d -printf '%p/, ' -o -type f -print | tr '\n' ',' | sed 's/,$/\n/'
