@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(printf "./, ../, "; ls -A1 | sed 's/$/,/' | tr '\n' ' ' | sed 's/,$//')
+echo "./, ../, $(ls -A1 | grep -E '^[0-9a-zA-Z]' | tr '\n' ',' | sed 's/,$//')"
