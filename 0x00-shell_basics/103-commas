@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(ls -A --group-directories-first | sed 's@\(.*\)/@\1/@' | grep '^[.0-9A-Za-z]' | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $//')
+echo $(printf "./, ../, "; ls -A1 | sed 's/$/,/' | tr '\n' ' ' | sed 's/,$//')
