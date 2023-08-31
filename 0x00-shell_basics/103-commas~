@@ -1,0 +1,2 @@
+#!/bin/bash
+'echo -n "./, ../, "; (ls -A | grep '^[.0-9A-Za-z]' | sort -k1,1d -k2 | while read -r item; do if [ -d "$item" ]; then printf "%s/, " "$item"; else printf "%s, " "$item"; fi; done) | sed 's/, $//'
