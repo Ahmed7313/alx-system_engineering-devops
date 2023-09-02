@@ -1,6 +1,2 @@
 #!/bin/bash
-for d in *; do
-  if [ -d "$d" ]; then
-    chmod a+x "$d"
-  fi
-done
+chmod -R ugo+x
