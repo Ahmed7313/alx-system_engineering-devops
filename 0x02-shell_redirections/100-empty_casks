@@ -1,2 +1,2 @@
 #!/bin/bash
-find . \( -type f -o -type d \) -empty -exec sh -c 'f="{}"; echo "${f##*/}"' \;
+find . -empty | rev | cut -d '/' -f | rev
