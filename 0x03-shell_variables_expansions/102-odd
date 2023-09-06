@@ -1,0 +1,2 @@
+#!/bin/bash
+count=1; while IFS= read -r line; do [ $((count % 2)) -eq 1 ] && echo "$line"; count=$((count + 1)); done
